@@ -184,7 +184,7 @@ or when the `Done` channel of the parent context is closed.
 {{< note >}}
 One of the return values of `Context.Done()` is a Go channel, which means that you will have to
 use a `select` statement to work with. Although `select` looks like `switch`, `select` allows a
-goroutine to wait on multiple communications operations.
+goroutine to wait on multiple send and receive operations on channels.
 {{< /note >}}
 
 On the other hand the `cancel` variable in `f2()` comes from `context.WithTimeout()`.
